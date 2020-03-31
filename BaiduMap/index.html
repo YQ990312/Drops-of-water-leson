@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #map{
+            width: 100vw;
+            height: 100vh;
+            background:pink;
+        }
+    </style>
+     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Io3VLOfhP5kP7D89c8P9Xc2GsDW8Qo4x"></script>
+</head>
+<body>
+    <div id="map">
+
+    </div>
+</body>
+<script>
+    window.onload=function(){
+         console.log('ready')
+        var map=new BMap.Map('map');
+        map.centerAndZoom('东华理工大学南昌校区',17);
+    }
+</script>
+</html>
