@@ -1,0 +1,57 @@
+body {
+    /* 取消浏览器的一些默认值 */
+    margin: 0;    
+    /* 设置视图的最小为整个窗口  */
+    min-height: 100vh;
+    /* 设置我流动 */
+    display: flex;
+    /* 在流动的情况下设置水平居中 */
+    justify-content: center;
+    /* 在流动的情况下，设置竖直居中 */
+    align-items: center;
+    /* 设置背景颜色和一些背景图 */
+    background: #4c4c4c url('https://unsplash.it/1500/900?image=1021');
+    /* 设置背景图的大小要适合 */
+    background-size: cover;
+  }
+
+  /* 设置容器的大小，并设置在容器里面的内容为浮动取消块级元素一行的设置 */
+  .wrapper{
+    width: 850px;
+    display: flex;
+  }
+
+  video {
+    box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .speed{
+      /* 设置背景 */
+    background: #efefef;
+    /* 设置占比 */
+    flex: 1;
+
+    display: flex;
+    align-items: flex-start;
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  .speed-bar{
+    width: 100%;
+    height: 16.3%;
+    background: linear-gradient(-170deg, #2376ae 0%, #c16ecf 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    color: #fff;
+    /* cursor：default 箭头，
+
+cursor：crosshair 十字，
+
+cursor：progress 沙漏等等。 */
+/* 这里是设置为手指 */
+    cursor: pointer;
+  }
