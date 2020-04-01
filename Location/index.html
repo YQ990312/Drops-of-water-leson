@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:100px">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="initial-scale=0.5,maximum-scale=0.5, minimum-scale=0.5,width=device-width, height=device-height, user-scalable=no">
+    <title>Document</title>
+    <script type="text/javascript"
+        src="https://api.map.baidu.com/api?v=2.0&ak=47FQtS6XkphGqmZ5nSEj6WTSTwE8SGaT"></script>
+
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            /* css 继承 */
+            font-size: 0.28rem;
+            line-height: 1.5;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .poi-item-wrapper {
+            background-color: #fff;
+            padding: 0.24rem 0 0 0.3rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .poi-item-wrapper .poi-info-wrapper {
+            display: flex;
+        }
+
+        .poi-item-wrapper .image-wrapper {
+            position: relative;
+            margin-top: 0.05rem;
+            width: 1.6rem;
+            height: 1.61rem;
+        }
+
+        .poi-item-wrapper .poi-info {
+            margin-left: 0.18rem;
+            flex: 1;
+        }
+
+        .poi-item-wrapper .poi-info .price-wrapper {
+            position: relative;
+            font-size: 0.24rem;
+            line-height: 0.33rem;
+            margin-top: 0.06rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            height: 2rem;
+        }
+
+        .poi-item-wrapper .poi-info .location {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 0.33rem;
+            line-height: 0.33rem;
+            font-size: 0.24rem;
+            font-family: PingFangSC-Regular;
+            color: #666666;
+            letter-spacing: 0.2px;
+        }
+        .poi-info .image-wrapper .imagebox{
+            top: 0;
+            right: 0;
+            height: 0.33rem;
+            line-height: 0.33rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shop-list">
+        <div class="poi-item-wrapper">
+            <div class="poi-info-wrapper">
+                <div class="image-wrapper">
+                    <div class="imagebox">
+                        <img src="http://p0.meituan.net/deal/__45899142__3351739.jpg@320w_320h_1e_1c" alt="">
+                    </div>
+                </div>
+                <div class="poi-info">
+                    <div class="poi-name"></div>
+                    <div class="price-wrapper">
+                        <div class="image-wrapper">
+                            <div class="imagebox">
+                                <img src="star.png" alt="">
+                            </div>
+                        </div>
+                        <div class="location">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="poi-item-wrapper">
+
+
+
+        </div>
+
+
+
+    </div>
+    <!-- 先求两个点的距离 -->
+    <script>
+        window.onload = function () {
+
+
+
+            function getLocation(e) {
+                // 否则 整数  936m
+                if (e < 1000) {
+                    console.log(parseInt(e))
+                    return parseInt(e);
+                } else {
+                    console.log((e / 1000).toFixed(1))
+                    return (e / 1000).toFixed(1);
+                }
+            }
+
+
+            // 获取百度图的api实例
+            const map = new BMap.Map();
+            const myLatitude = '28.544622',
+                myLongitude = '115.941546',
+                otherLatitude = '28.549066',
+                otherLongitude = '115.950531';
+
+
+            const myLocation = new BMap.Point(myLatitude, myLongitude);
+            const otherLocation = new BMap.Point(otherLatitude, otherLongitude);
+            const LocationNum = getLocation(
+                map.getDistance(myLocation, otherLocation)
+            );
+
+            document.querySelector('.poi-name').innerHTML = '杨家齐';
+            document.querySelector('.location').innerHTML = LocationNum;
+            document.querySelector('.imgbox img').src = "https://p0.meituan.net/200.0/deal/607cffdccca7f4da09a2dddeedd31a8e49072.jpg@126_0_388_388a%7C267h_267w_2e_100Q"
+
+
+        }
+    </script>
+</body>
+
+</html>
