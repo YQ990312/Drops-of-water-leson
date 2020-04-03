@@ -1,0 +1,99 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.page-one{
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    /* 文字居中的方法，文字居中简单 */
+    background-color: darkgoldenrod;
+    text-align: center;
+    color: thistle;
+
+}
+.page-one button{
+    /* 把按钮的边框去掉 */
+    outline: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    background-color: #428bca;
+    width: 300px;
+    border-radius: 5px;
+}
+.page-one h1{
+    margin: 50px;
+}
+.page-one p{
+    margin: 50px;
+}
+.page-two{
+    width: 100%;
+    height: 60%;
+    top: 200px;
+    /* 取消块级元素的一行处理 */
+    display: flex;
+    /* 自动换行在子元素设置宽度后自动换行，一行元素自动处理 */
+    flex-wrap: wrap;
+    
+    position: absolute;
+}
+.page-two .block div {
+    /* calc 一个函数 */
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+  }
+  .page-game{
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    position: relative;
+    display: none;
+  }
+  .game-source{
+      position: sticky;
+      width: 100%;
+      height: 200px;
+      top: 0px;
+  }
+  .title{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    padding-left: 100px;
+    padding-top: 50px;
+  }
+  .title h2{
+      color:darkgoldenrod;
+  }
+  .getsoure{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    padding-left: 100px;
+    top: 130px;
+    color: darkgoldenrod;
+    
+  }
+
+  .finish{
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    color: thistle;
+    position: absolute;
+    background-color: darkgoldenrod;
+    display: none;
+  }
+
+  .finish h1{
+    margin: 50px;
+}
+.finish h2{
+    margin: 50px;
+}
