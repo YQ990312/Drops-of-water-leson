@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 这里设置字体 */
+@font-face{
+  font-family:'icomoon';
+  src:url("./font/icomoon.eot?yisc3l");
+  src:url("./font/icomoon.eot?yisc3l#iefix") format("embedded-opentype"),
+  url("./font/icomoon.woff2?yisc3l") format("woff2"),
+  url("./font/icomoon.ttf?yisc3l") format("truetype"),
+  url("./font/icomoon.woff?yisc3l") format("woff"),
+  url("./font/icomoon.svg?yisc3l#icomoon") format("svg");
+}
+
+a{
+  text-decoration: none;
+}
+.gleft{
+  float: left;
+  border-right: 1px solid #BDDAF5;
+  width: 182px;
+  margin: 6px 0 5px 12px;
+}
+.gright{
+  float: left;
+  margin: 6px 0 5px 12px;
+}
+.finace-wrapper{
+  height: 102px;
+  width: 388px;
+  border: 1px solid #CAE0F3;
+  border-top: 3px solid #9EC9EE;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%,0,0);
+}
+.st-item .detail span{
+  color: #DF4D42;
+}
+.price{
+  font-size: 16px;
+  padding: 4px;
+}
+.float{
+  font-size: 12px;
+  padding: 4px;
+}
+.percent{
+  font-size: 12px;
+  padding: 4px;
+}
+.st-item .st-title{
+  color: black;
+  font-family: "icomoon";
+}
